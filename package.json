@@ -1,0 +1,34 @@
+{
+  "name": "lasles-vpn",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "5.2.6",
+    "@mdi/font": "7.4.47",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.17",
+    "vuetify": "^3.9.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "eslint": "^9.30.1",
+    "eslint-config-vuetify": "^4.0.0",
+    "sass-embedded": "^1.89.2",
+    "unplugin-auto-import": "^19.3.0",
+    "unplugin-fonts": "^1.3.1",
+    "unplugin-vue-components": "^28.8.0",
+    "unplugin-vue-router": "^0.14.0",
+    "vite": "^6.3.5",
+    "vite-plugin-vue-layouts-next": "^1.0.0",
+    "vite-plugin-vuetify": "^2.1.1",
+    "vue-router": "^4.5.1"
+  },
+  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748"
+}
