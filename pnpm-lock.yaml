@@ -8,15 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@date-io/core':
-        specifier: ^3.2.0
-        version: 3.2.0
       '@date-io/date-fns':
         specifier: ^3.2.1
         version: 3.2.1(date-fns@4.1.0)
-      '@date-io/date-fns-jalali':
-        specifier: ^3.2.0
-        version: 3.2.0
       '@fontsource/roboto':
         specifier: 5.2.6
         version: 5.2.6
@@ -113,14 +107,6 @@ packages:
 
   '@date-io/core@3.2.0':
     resolution: {integrity: sha512-hqwXvY8/YBsT9RwQITG868ZNb1MVFFkF7W1Ecv4P472j/ZWa7EFcgSmxy8PUElNVZfvhdvfv+a8j6NWJqOX5mA==}
-
-  '@date-io/date-fns-jalali@3.2.0':
-    resolution: {integrity: sha512-KyWZK/z1H7phH7WjLI05CN4EqfvUvfWaK4oyzUEfvpydnH+O8cgv68hjGgU0k/Ibl2Owu2uYDyR2oFcZQQZ4hw==}
-    peerDependencies:
-      date-fns-jalali: ^3.2.0-0
-    peerDependenciesMeta:
-      date-fns-jalali:
-        optional: true
 
   '@date-io/date-fns@3.2.1':
     resolution: {integrity: sha512-CtXgTOAamkImI+CmbWRNdBi4ljj9xm/tdoPa+eeeiygduzubJTsXp18vYz+Vs/9yLho1zUOXlxpsfsF7PsXSWQ==}
@@ -2168,10 +2154,6 @@ snapshots:
       sisteransi: 1.0.5
 
   '@date-io/core@3.2.0': {}
-
-  '@date-io/date-fns-jalali@3.2.0':
-    dependencies:
-      '@date-io/core': 3.2.0
 
   '@date-io/date-fns@3.2.1(date-fns@4.1.0)':
     dependencies:

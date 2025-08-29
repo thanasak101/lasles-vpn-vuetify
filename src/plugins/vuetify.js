@@ -8,10 +8,11 @@
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 
-import { VDateInput } from 'vuetify/labs/VDateInput'
-
 // Composables
 import { createVuetify } from 'vuetify'
+
+import { VDateInput } from 'vuetify/labs/VDateInput'
+import { th } from 'vuetify/locale'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 const myCustomLightTheme = {
@@ -65,5 +66,15 @@ export default createVuetify({
   },
   components: {
     VDateInput
-  }
+  },
+  locale: {
+    locale: 'th',
+    fallback: 'en',
+    messages: { th },
+  },
+  date: {
+    locale: {
+      th: 'th-TH',
+    },
+  },
 })
