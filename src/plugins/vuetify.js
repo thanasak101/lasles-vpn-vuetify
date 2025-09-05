@@ -35,7 +35,8 @@ const myCustomLightTheme = {
     'secondary-color': '#4F5665',
     'blue-color': '#0B132A',
     'red-color': '#F53855',
-    'orange-color': '#F53838'
+    'orange-color': '#F53838',
+    'yellow-color': '#FEA250'
   },
   variables: {
     'border-color': '#000000',

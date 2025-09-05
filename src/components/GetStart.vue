@@ -50,49 +50,31 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container>
+    <v-container class="mt-0 mt-sm-5 mt-md-12">
       <v-row>
-        <v-col cols="12" sm="4">
-          <div class="d-flex justify-center ga-10">
-            <img :src="stat1" />
-            <div class="d-flex flex-column">
-              <span class="rubik-25-bold" style="color: #0b132a">90+</span>
-              <span class="rubik-20-regular" style="color: #4f5665;width: 91px;">Users</span>
+        <template v-for="(item, index) in stats" :key="index">
+          <v-col cols="12" sm="4">
+            <div class="d-flex justify-center ga-10">
+              <img :src="item.icon" />
+              <div class="d-flex flex-column">
+                <span class="rubik-25-bold" style="color: #0b132a">{{
+                  item.value
+                }}</span>
+                <span
+                  class="rubik-20-regular"
+                  style="color: #4f5665; width: 91px"
+                  >{{ item.label }}</span
+                >
+              </div>
             </div>
-          </div>
-        </v-col>
-        <v-divider
-          :thickness="1"
-          class="border-opacity-25 vdivider"
-          vertical
-        ></v-divider>
-        <v-col cols="12" sm="4">
-          <div class="d-flex justify-center ga-10">
-            <img :src="stat2" />
-            <div class="d-flex flex-column">
-              <span class="rubik-25-bold" style="color: #0b132a">30+</span>
-              <span class="rubik-20-regular" style="color: #4f5665;width: 91px;"
-                >Locations</span
-              >
-            </div>
-          </div>
-        </v-col>
-        <v-divider
-          :thickness="1"
-          class="border-opacity-25 vdivider"
-          vertical
-        ></v-divider>
-        <v-col cols="12" sm="4">
-          <div class="d-flex justify-center ga-10">
-            <img :src="stat3" />
-            <div class="d-flex flex-column">
-              <span class="rubik-25-bold" style="color: #0b132a">50+</span>
-              <span class="rubik-20-regular" style="color: #4f5665;width: 91px;"
-                >Servers</span
-              >
-            </div>
-          </div>
-        </v-col>
+          </v-col>
+          <v-divider
+            v-if="index < stats.length - 1"
+            :thickness="1"
+            class="border-opacity-25 vdivider"
+            vertical
+          ></v-divider>
+        </template>
       </v-row>
     </v-container>
   </div>
@@ -103,6 +85,14 @@ import pic1 from "@/assets/Illustration1.svg";
 import stat1 from "@/assets/stat1.svg";
 import stat2 from "@/assets/stat2.svg";
 import stat3 from "@/assets/stat3.svg";
+
+import { ref } from "vue";
+
+const stats = ref([
+  { value: "90+", label: "Users", icon: stat1 },
+  { value: "30+", label: "Locations", icon: stat2 },
+  { value: "50+", label: "Servers", icon: stat3 },
+]);
 </script>
 
 <style scoped>
@@ -146,7 +136,7 @@ import stat3 from "@/assets/stat3.svg";
 
 /* Responsive adjustments */
 @media (max-width: 599.78px) {
-  .vdivider{
+  .vdivider {
     display: none;
   }
 }
@@ -161,7 +151,7 @@ import stat3 from "@/assets/stat3.svg";
 }
 
 .btnStart {
-  box-shadow: 0 8px 20px rgba(243, 78, 78, 0.4) !important;
+  box-shadow: 0 12px 54px rgba(243, 78, 78, 0.54) !important;
   transition: all 0.3s ease !important;
 }
 
